@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-server",
+  "version": "1.0.0",
+  "description": "sample express react fullstack app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saragibby/express-react-fullstack.git"
+  },
+  "author": "Sara Gibbons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saragibby/express-react-fullstack/issues"
+  },
+  "homepage": "https://github.com/saragibby/express-react-fullstack#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

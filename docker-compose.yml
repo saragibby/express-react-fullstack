@@ -1,0 +1,20 @@
+services:
+  api:
+    image: api
+    build:
+      context: ./api/.devcontainer
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "3001:3001"
+
+  client:
+    image: client
+    build:
+      context: ./client/.devcontainer
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "3000:3000"

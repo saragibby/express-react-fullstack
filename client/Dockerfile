@@ -2,13 +2,9 @@
 ARG VARIANT=16-bullseye
 FROM node:18.0.0
 
-RUN mkdir /app
-WORKDIR /app
-
-# WORKDIR /usr/app
-
-COPY * /app/
-# RUN npm install
+WORKDIR /usr/app
+COPY package*.json /usr/app
+RUN npm install
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -17,6 +13,6 @@ COPY * /app/
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
-
+`
 # [Optional] Uncomment if you want to install more global node modules
 # RUN su node -c "npm install -g <your-package-list-here>"

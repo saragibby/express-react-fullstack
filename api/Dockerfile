@@ -2,8 +2,12 @@
 ARG VARIANT=16-bullseye
 FROM node:18.0.0
 
-WORKDIR /usr/app
-COPY ../ /usr/app
+RUN mkdir /app
+WORKDIR /app
+
+# WORKDIR /usr/app
+
+COPY package*.json /app/
 RUN npm install
 
 # [Optional] Uncomment this section to install additional OS packages.

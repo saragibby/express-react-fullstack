@@ -6,6 +6,7 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/workspace:cached
+    command: bash -c "npm install && npm run start"
     ports:
       - "3001:3001"
 
@@ -16,5 +17,6 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/workspace:cached
+    command: bash -c "npm install && npm run start"
     ports:
       - "3000:3000"
